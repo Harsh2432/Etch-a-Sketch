@@ -21,6 +21,7 @@
 
 #mainSection {
     display: flex;
+    flex: 1;
     gap: 10px;
 }
 
@@ -35,7 +36,7 @@
     background-color: #E5E7EB;
     font-family: monospace;
     font-size: 24px;
-    height: 400px;
+    height: 375px;
     width: 1210px;
 }
 
@@ -52,5 +53,20 @@
 
 #footer {
     display: flex;
+    flex: 1;
+    padding: 10px;
+    gap: 10px;
+    background-color: #E5E7EB;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
+.copyright {
+    font-family: monospace;
+    font-size: 24px;
+}
+
+.heart {
+    font-size: 20px;
 }
