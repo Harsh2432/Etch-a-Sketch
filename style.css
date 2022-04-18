@@ -1,12 +1,51 @@
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
     gap: 10px;
 }
 
 #nameSection {
-    
+    display: flex;
+}
+
+.name {
+    flex: 1;
+    background-color: #E5E7EB;
+    font-family: monospace;
+    font-size: 24px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#mainSection {
+    display: flex;
+    gap: 10px;
+}
+
+.options {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E7EB;
+    font-family: monospace;
+    font-size: 24px;
+    height: 400px;
+    width: 1210px;
+}
+
+.boxes {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E7EB;
 }
