@@ -10,10 +10,10 @@
 
 .name {
     flex: 1;
+    padding: 10px;
     background-color: #E5E7EB;
     font-family: monospace;
     font-size: 24px;
-    padding: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -48,4 +48,9 @@
     justify-content: center;
     align-items: center;
     background-color: #E5E7EB;
+}
+
+#footer {
+    display: flex;
+
 }
