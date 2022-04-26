@@ -1,3 +1,5 @@
+let color = String;
+
 const body = document.querySelector("body");
 
 function getRandomColor() {
@@ -24,7 +26,8 @@ customColor.style.cssText = "color: black; justify-content: center; align-items:
 customColor.style.backgroundColor = getRandomColor();
 
 customColor.addEventListener("click", () => {
-    customColor.style.backgroundColor = getRandomColor();
+    color = getRandomColor()
+    customColor.style.backgroundColor = color;
 });
 
 options.appendChild(customColor);
@@ -61,10 +64,28 @@ options.appendChild(clear);
 function boxMaker() {
     const drawBoxes = document.createElement("button");
     drawBoxes.classList.add("drawBoxes");
-    drawBoxes.style.cssText = "height: 30px; width: 30px; padding: 5px; border: #E5E7EB;";
+    drawBoxes.style.cssText = "height: 30px; width: 30px; padding: 5px; border: #E5E7EB; background-color: white;";
     boxes.appendChild(drawBoxes);
+    customColor.addEventListener("click", () => {
+        drawBoxes.addEventListener("mouseover", function (event) {
+            event.target.style.backgroundColor = color;
+        });
+    });
+    rainbowColor.addEventListener("click", () => {
+        drawBoxes.addEventListener("mouseover", function (event) {
+            event.target.style.backgroundColor = getRandomColor();
+        });
+    });
+    eraser.addEventListener("click", () => {
+        drawBoxes.addEventListener("mouseover", function (event) {
+            event.target.style.backgroundColor = "white";
+        });
+    });
+    clear.addEventListener("click", () => {
+        drawBoxes.style.backgroundColor = "white";
+    });
 }
 
-for(let i = 0; i < 312; i++) {
+for (let i = 0; i < 312; i++) {
     boxMaker();
 }
