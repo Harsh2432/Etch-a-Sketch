@@ -1,4 +1,4 @@
-let body = document.querySelector("body");
+const body = document.querySelector("body");
 
 function getRandomColor() {
     let letters = '0123456789ABCDEF';
@@ -15,7 +15,7 @@ function changeColor() {
 
 setInterval(changeColor, 1000);
 
-let options = document.querySelector(".options");
+const options = document.querySelector(".options");
 
 const customColor = document.createElement("button");
 customColor.classList.add("customColor");
@@ -54,4 +54,17 @@ clear.classList.add("clear");
 clear.textContent = "Clear";
 clear.style.cssText = "color: black; justify-content: center; align-items: center; font-family: monospace; font-size: 18px; font-weight: bold; padding: 10px; border-radius: 10px; height: 50px; width: 200px;";
 
+const boxes = document.querySelector(".boxes");
+
 options.appendChild(clear);
+
+function boxMaker() {
+    const drawBoxes = document.createElement("button");
+    drawBoxes.classList.add("drawBoxes");
+    drawBoxes.style.cssText = "height: 30px; width: 30px; padding: 5px;";
+    boxes.appendChild(drawBoxes);
+}
+
+for(let i = 0; i < 312; i++) {
+    boxMaker();
+}
