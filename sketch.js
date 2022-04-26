@@ -61,7 +61,7 @@ options.appendChild(clear);
 function boxMaker() {
     const drawBoxes = document.createElement("button");
     drawBoxes.classList.add("drawBoxes");
-    drawBoxes.style.cssText = "height: 30px; width: 30px; padding: 5px;";
+    drawBoxes.style.cssText = "height: 30px; width: 30px; padding: 5px; border: #E5E7EB;";
     boxes.appendChild(drawBoxes);
 }
 
